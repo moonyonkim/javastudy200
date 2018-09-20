@@ -10,7 +10,12 @@ public class BioCalendar {
 	public static void main(String[] args) {
 		int index=PHYSICAL;                  // 상수값을 변수에 대입
 		int days=1200;     
-		double phyval=100*Math.sin( (days % index) * 2 * Math.PI / index );   // TODO: phyval 구하는 함수 구현 
+		double phyval= getPhysical(days, index)  // TODO: phyval 구하는 함수 구현 
 		System.out.printf("나의 신체지수 %1$.2f입니다.\n",phyval);
+	}
+	
+	public static double getPhysical( int days, int index ) {
+		return 100*Math.sin( (days % index) * 2 * Math.PI / index );
+		
 	}
 }
